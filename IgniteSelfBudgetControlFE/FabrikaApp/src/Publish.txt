@@ -1,7 +1,0 @@
-LOCAL:  java -jar C:\_fabrikaline\FabrikaLine_Backend\target\FabrikaLine_Backend-0.0.1-SNAPSHOT.jar
-REMOTE:
-npm install -g firebase-tools
-firebase login 
-firebase init  
-ng build 
-firebase deploy

@@ -1,8 +1,0 @@
-{
-  "projects": {
-    "default": "ignitsbc",
-    "igniteSBC": "ignitsbc"
-  },
-  "targets": {},
-  "etags": {}
-}
