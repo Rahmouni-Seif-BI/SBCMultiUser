@@ -71,6 +71,9 @@ import {
 } from '@coreui/angular';
 import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { DocsComponentsModule } from '@docs-components/docs-components.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from 'src/app/config/service/auth.interceptor';
+import { ErrorInterceptor } from 'src/app/config/service/error-interceptor';
 @NgModule({
   imports: [
     CardModule,
@@ -124,8 +127,19 @@ import { DocsComponentsModule } from '@docs-components/docs-components.module';
     ToolbarService,
     GridResizeService,
     GroupService,
-    
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthInterceptor,
+    //   multi: true
+    // },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: ErrorInterceptor,
+    //   multi: true
+    // },
   ]
+
+  
 })
 export class AdministrationModule {
 }

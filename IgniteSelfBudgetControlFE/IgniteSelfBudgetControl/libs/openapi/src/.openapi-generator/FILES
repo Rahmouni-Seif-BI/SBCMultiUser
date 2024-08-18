@@ -11,12 +11,14 @@ api/purposeController.service.ts
 api/repaymentEntityController.service.ts
 api/spendingController.service.ts
 api/userEntityController.service.ts
+api/welcomeController.service.ts
 configuration.ts
 encoder.ts
 git_push.sh
 index.ts
 model/account.ts
 model/accountDTO.ts
+model/authRequest.ts
 model/creditEntity.ts
 model/creditEntityDTO.ts
 model/creditStatus.ts
@@ -27,6 +29,7 @@ model/purpose.ts
 model/repaymentEntity.ts
 model/repaymentEntityDTO.ts
 model/spending.ts
+model/userDTO.ts
 model/userEntity.ts
 param.ts
 variables.ts

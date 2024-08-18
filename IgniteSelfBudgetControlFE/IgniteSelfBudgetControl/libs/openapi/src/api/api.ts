@@ -16,4 +16,6 @@ export * from './spendingController.service';
 import { SpendingControllerService } from './spendingController.service';
 export * from './userEntityController.service';
 import { UserEntityControllerService } from './userEntityController.service';
-export const APIS = [AccountControllerService, CreditEntityControllerService, CreditStatusControllerService, DashboardControllerService, DepositeControllerService, PurposeControllerService, RepaymentEntityControllerService, SpendingControllerService, UserEntityControllerService];
+export * from './welcomeController.service';
+import { WelcomeControllerService } from './welcomeController.service';
+export const APIS = [AccountControllerService, CreditEntityControllerService, CreditStatusControllerService, DashboardControllerService, DepositeControllerService, PurposeControllerService, RepaymentEntityControllerService, SpendingControllerService, UserEntityControllerService, WelcomeControllerService];

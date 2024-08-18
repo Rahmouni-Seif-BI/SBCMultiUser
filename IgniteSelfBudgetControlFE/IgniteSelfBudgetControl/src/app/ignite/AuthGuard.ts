@@ -20,10 +20,10 @@ export class AuthGuard implements CanActivateChild {
   }
 
   isLogedIn(): boolean {
-    if (localStorage.getItem('AETB43s2346é(qfdgLDJSKNZREGèMVQ685FAEZRHbzdqvlkn')) {
-      // this.userName = ' : Session ouverte pour ' + localStorage.getItem('user')
+    if (localStorage.getItem('user')) {
+      this.userName = ' : Session ouverte pour ' + localStorage.getItem('user')
       return true
     }
     return false
-  } 
+  }
 }

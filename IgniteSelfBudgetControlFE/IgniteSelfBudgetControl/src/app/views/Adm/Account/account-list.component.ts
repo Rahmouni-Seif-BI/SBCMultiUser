@@ -6,6 +6,7 @@ import { loadCldr, setCulture, setCurrencyCode, L10n } from '@syncfusion/ej2-bas
 import numbers from './../../../cldr-data/numbers.json';
 import currencies from './../../../cldr-data/currencies.json';
 import { extraConfig } from 'src/app/config/extraConfig';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-account-list',
@@ -16,13 +17,26 @@ export class AccountListComponent implements OnInit {
 
 
 
-  constructor(private route: Router, private _service: AccountControllerService) { }
+  constructor(private route: Router, private _service: AccountControllerService, public http: HttpClient) { }
+
   ngOnInit(): void {
     loadCldr( currencies,  numbers,  );
     setCulture('tr');
     setCurrencyCode('TND');
     this.load();
     
+  }
+
+
+  testCors() {
+    this.http.get('http://localhost:8083/Account/getAllAccounts').subscribe((res:any)=> {
+      if (res != null) {
+        alert(res[0])
+      }
+      else{
+        alert("BAD THING HAPPNED !!!!")
+      }
+    })
   }
 
   @ViewChild('grid') public grid!: GridComponent;

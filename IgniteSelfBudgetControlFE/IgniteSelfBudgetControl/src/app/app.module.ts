@@ -38,14 +38,18 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { AdministrationModule } from './views/Adm/administration.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+
+
+import { AuthInterceptor } from './config/service/auth.interceptor';
+import {ErrorInterceptor  } from './config/service/error-interceptor';
+
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
   DefaultLayoutComponent
 ];
-
 @NgModule({
   declarations: [AppComponent, ...APP_CONTAINERS],
   imports: [
@@ -79,6 +83,16 @@ const APP_CONTAINERS = [
     HttpClientModule
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true
+    },
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy

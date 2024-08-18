@@ -12,11 +12,12 @@ export class LogoutComponent implements OnInit {
 
 
   ngOnInit(): void {
-    if (!localStorage.getItem('AETB43s2346é(qfdgLDJSKNZREGèMVQ685FAEZRHbzdqvlkn')) {
+    if (!localStorage.getItem('user')) {
       this.router.navigate(['/login']);
     }
     else {
-      localStorage.setItem('AETB43s2346é(qfdgLDJSKNZREGèMVQ685FAEZRHbzdqvlkn', "")
+      localStorage.setItem('user', "")
+      localStorage.setItem('authtoken', "")
       this.router.navigate(['/login']);
       }
   }

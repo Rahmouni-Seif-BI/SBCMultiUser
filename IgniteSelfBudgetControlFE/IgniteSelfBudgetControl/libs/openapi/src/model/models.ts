@@ -1,5 +1,6 @@
 export * from './account';
 export * from './accountDTO';
+export * from './authRequest';
 export * from './creditEntity';
 export * from './creditEntityDTO';
 export * from './creditStatus';
@@ -9,4 +10,5 @@ export * from './purpose';
 export * from './repaymentEntity';
 export * from './repaymentEntityDTO';
 export * from './spending';
+export * from './userDTO';
 export * from './userEntity';

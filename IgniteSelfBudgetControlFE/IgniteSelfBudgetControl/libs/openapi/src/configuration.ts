@@ -86,6 +86,15 @@ export class Configuration {
         else {
             this.credentials = {};
         }
+
+        // init default JavaInUseSecurityScheme credential
+        if (!this.credentials['JavaInUseSecurityScheme']) {
+            this.credentials['JavaInUseSecurityScheme'] = () => {
+                return typeof this.accessToken === 'function'
+                    ? this.accessToken()
+                    : this.accessToken;
+            };
+        }
     }
 
     /**
