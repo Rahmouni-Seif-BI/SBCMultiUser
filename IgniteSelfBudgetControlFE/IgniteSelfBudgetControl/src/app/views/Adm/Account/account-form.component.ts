@@ -43,11 +43,11 @@ export class AccountFormComponent implements OnInit {
       this.load();
 
 
-      this.loadDeposite();
-      this.getSpendingsByAccount();
-      this.getDepositesByAccount();
-      this.getCreditGiven();
-      this.getRepayment();
+      // this.loadDeposite();
+      // this.getSpendingsByAccount();
+      // this.getDepositesByAccount();
+      // this.getCreditGiven();
+      // this.getRepayment();
     }
   }
 

@@ -11,7 +11,6 @@ export class ErrorHandlingService {
         localStorage.setItem('authtoken', '');
         localStorage.setItem('user', '');
         this.router.navigateByUrl('/login');
-
     }
   }
 }
